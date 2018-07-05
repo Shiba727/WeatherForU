@@ -1,11 +1,14 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
-var cookieParser = require('cookie-parser');
+// var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+
+var session = require('express-session');
+
+var bcrypt = require('bcryptjs');
 
 var app = express();
 
@@ -16,11 +19,20 @@ app.set('view engine', 'ejs');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
+// app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+
+var mongo = require('mongodb');
+var mongoose = require('mongoose');
+
+//create db connection using mongoose
+var db = mongoose.connection;
+
+app.use(session({secret: 'JaniceCertified', saveUninitialized: true, resave: false}));
+
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -38,5 +50,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.listen(3000);
 module.exports = app;
+
+//當session.id is undefined -> check app.use 的執行順序
+//https://stackoverflow.com/questions/39796228/req-session-is-undefined-using-express-session
