@@ -1,0 +1,171 @@
+* {
+  position: relative;
+  text-decoration: none;
+}
+
+body, html {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.u-tf:after {
+  content: "";
+  clear: both;
+  display: block;
+  visibility: hidden;
+}
+
+.navbar {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.navbar .logo {
+  float: left;
+  top: 5px;
+  padding: 15px;
+}
+.navbar .menu {
+  float: right;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  top: 4px;
+}
+.navbar .menu li {
+  float: left;
+  padding: 10px 15px;
+  margin-right: 15px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  transition: 0.5s;
+  font-weight: 600;
+  transition: 0.5s;
+}
+.navbar .menu li:hover {
+  border: 1px solid black;
+}
+.navbar .searchForm {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.navbar .searchForm .searchText {
+  padding: 5px;
+  font-weight: 600;
+  border-radius: 5px;
+  line-height: 100%;
+  font-size: 20px;
+  border: none;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+.navbar .searchForm .searchBtn {
+  padding: 5px 10px;
+  font-size: 15px;
+  margin-right: 100px;
+}
+.navbar .searchForm .btn {
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+}
+
+/* -----login----- */
+
+.loginBox {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+.loginBox .title {
+  font-weight: 600;
+  font-size: 30px;
+}
+.loginBox .loginText {
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: none;
+  padding: 5px;
+  font-weight: 600;
+  border-radius: 5px;
+  line-height: 100%;
+  font-size: 20px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+.loginBox .loginSubmit {
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: none;
+  font-weight: 300;
+  font-size: 20px;
+  padding: 5px 20px;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.loginBox .loginSubmit:hover {
+  background-color: red;
+}
+.loginBox a.link {
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+/* -----signup----- */
+
+.signupBox {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+.signupBox .title {
+  font-weight: 600;
+  font-size: 30px;
+}
+.signupBox .signupText {
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: none;
+  padding: 5px;
+  font-weight: 600;
+  border-radius: 5px;
+  line-height: 100%;
+  font-size: 20px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+.signupBox .signupSubmit {
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: none;
+  font-weight: 300;
+  font-size: 20px;
+  padding: 5px 20px;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.signupBox .signupSubmit:hover {
+  background-color: red;
+}
+.signupBox a.link {
+  text-decoration: none;
+  margin-top: 10px;
+}
