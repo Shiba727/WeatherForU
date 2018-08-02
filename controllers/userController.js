@@ -1,7 +1,10 @@
 const bcrypt = require('bcrypt');
 var db = require('../models');
 var User = db.User;
+<<<<<<< HEAD
 var Weathers = db.Weathers;
+=======
+>>>>>>> origin/revised_sql
 
 // bcrypt.encode is for encrpt the password
 let userController = {
@@ -47,6 +50,7 @@ let userController = {
 	},
 	logout: function(req,res){
 		req.session.destroy();
+<<<<<<< HEAD
 		Weathers.destroy({where:{},truncate: true});
 		res.redirect(303,'/');
 	},
@@ -54,6 +58,10 @@ let userController = {
 		res.render('user',{title:'User Page'});
 		
 	}
+=======
+		res.redirect(303,'/');
+	}	
+>>>>>>> origin/revised_sql
 };
 module.exports = userController;
 
