@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title%>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+</head>
+
+<body>
+
+  <div class="narbarBox">
+    <div class="navbar u-tf">
+      <div class="logo">WeatherForYou</div>
+      <form class="searchForm" action="">
+        <input class="searchText" type="text" />
+        <input class="btn searchBtn" type="submit" value="Search" />
+      </form>
+
+      <ul class="menu">
+        <li>
+          <a class="mainPage" href="/index">Main</a>
+        </li>
+        <li  class="ui icon">
+          <a href="/user"><i class="far fa-user"></i></a>
+        </li>
+        <li>
+          <a class="logout" href="/logout">Log Out</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+  <div id="map"></div>
+  <div id="test"></div>
+
+
+  <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAyE4DinOX_M4I4119mrAPJm3UVgddzJzI&callback=initMap'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="/javascripts/richmarker.js"></script>
+  <script>
+    console.log('we accepted!');
+    var script = '<script src="/javascripts/richmarker';
+    if (document.location.search.indexOf('compiled') !== -1) {
+      script += '-compiled';
+    }
+    script += '.js"><' + '/script>';
+    document.write(script);
+  </script>
+  <script src="/javascripts/index.js"></script>
+
+</body>
+
+</html>

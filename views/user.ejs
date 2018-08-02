@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= title%></title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+    </head>
+    <body>
+        <div class="navbar u-tf">
+            <div class="logo">WeatherForU</div>
+            <form class="searchForm" action="">
+            <input class="searchText" type="text"/>
+            <input class="btn searchBtn" type="submit" value="Search"/>
+            </form>
+            <ul class="menu">
+            <li class="ui item"><a class="mainPage" href="/index">Main</a></li>
+            <li class="ui icon"><i class="far fa-bell"></i></li>
+            <a href="/user"><li class="ui icon"><i class="far fa-user"></i></li></a>
+            </ul>
+        </div>
+        <div class="userInfoCard">
+            <div class="userPhoto"><i class="far fa-user"></i></div>
+            <h2>User</h2><span>useremail@gmail.com</span>
+            <div class="enableNote">
+            <input type="checkbox"/>
+            <label for="">開啟提醒功能?</label>
+            </div>
+        </div>
+    </body>
+        
+</html>

@@ -1,0 +1,555 @@
+* {
+  position: relative;
+  text-decoration: none;
+  font-family: "微軟正黑體","Lato";
+}
+
+body, html {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1A95F0;
+}
+
+.u-tf:after {
+  content: "";
+  clear: both;
+  display: block;
+  visibility: hidden;
+}
+
+
+
+
+
+/* ------navbar------ */
+.navbarBox {
+  position: absolute;
+}
+
+.navbar {
+  padding: 10px;
+  background-color: white;
+}
+.navbar .logo {
+  float: left;
+  top: 5px;
+  padding: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #F85E13;
+}
+.navbar .menu {
+  float: right;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  top: 4px;
+}
+.navbar .menu li {
+  float: left;
+  padding: 10px 15px;
+  margin-right: 15px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  color: #F85E13;
+  
+  transition: 0.5s;
+  font-weight: 600;
+  transition: 0.5s;
+}
+.navbar .menu li:hover {
+  border: 1px solid #DD4F20 ;
+  
+}
+.navbar .searchForm {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.navbar .searchForm .searchText {
+  padding: 5px;
+  font-weight: 600;
+  border-radius: 5px;
+  line-height: 100%;
+  font-size: 20px;
+  border: none;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+.navbar .searchForm .searchBtn {
+  padding: 5px 10px;
+  font-size: 15px;
+  margin-right: 100px;
+}
+.navbar .searchForm .btn {
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+}
+
+
+
+
+
+
+
+/* ------- infocard----------- */
+#areaInfoCard {
+  box-shadow: 0px 0px 10px black;
+  border-radius: 5px;
+  padding: 15px;
+  float: left;
+  background-color: #fff;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+#areaInfoCard .areaInfoBox {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+#areaInfoCard .areaInfoBox .rainfallBox, #areaInfoCard .areaInfoBox .airBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#areaInfoCard .areaInfoBox .temperBox, #areaInfoCard .areaInfoBox .rainfallBox, #areaInfoCard .areaInfoBox .airBox {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+#areaInfoCard .areaInfoBox .areaBox {
+  display: flex;
+}
+#areaInfoCard .areaInfoBox .areaBox .areaName {
+  margin: 0;
+  right: 0;
+}
+#areaInfoCard .areaInfoBox .areaBox .spaceblock {
+  width: 95px;
+  height: 35px;
+}
+#areaInfoCard .areaInfoBox .areaBox .weatherIcon {
+  position: absolute;
+  width: 95px;
+  height: 35px;
+  border-radius: 20px;
+  top: 20px;
+  -webkit-animation: cloudrift 2s infinite;
+          animation: cloudrift 2s infinite;
+  -webkit-animation-delay: -0.1s;
+          animation-delay: -0.1s;
+  background-color: rgb(153, 146, 146);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+}
+#areaInfoCard .areaInfoBox .areaBox .weatherIcon:before, #areaInfoCard .areaInfoBox .areaBox .weatherIcon:after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(153, 146, 146);
+}
+#areaInfoCard .areaInfoBox .areaBox .weatherIcon:before {
+  top: -25px;
+  left: 15px;
+}
+#areaInfoCard .areaInfoBox .areaBox .weatherIcon:after {
+  top: -15px;
+  left: 40px;
+}
+#areaInfoCard .areaInfoBox .areaBox .weatherIcon .rainBox {
+  left: 20px;
+  top: 45px;
+}
+#areaInfoCard .areaInfoBox .areaBox .weatherIcon .rainBox .rain {
+  width: 3px;
+  height: 7px;
+  position: absolute;
+  opacity: 0;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+  -webkit-animation: raindrop 1s infinite linear;
+          animation: raindrop 1s infinite linear;
+  background-color: black;
+}
+#areaInfoCard .areaInfoBox .areaBox .weatherIcon .rainBox .rain1 {
+  opacity: 1;
+  left: 1px;
+  bottom: 10px;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+#areaInfoCard .areaInfoBox .areaBox .weatherIcon .rainBox .rain2 {
+  opacity: 1;
+  left: 10px;
+  bottom: 10px;
+  -webkit-animation-delay: -0.4s;
+          animation-delay: -0.4s;
+}
+#areaInfoCard .areaInfoBox .areaBox .weatherIcon .rainBox .rain3 {
+  opacity: 1;
+  left: 20px;
+  bottom: 10px;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+#areaInfoCard .areaInfoBox .areaBox .weatherIcon .rainBox .rain4 {
+  opacity: 1;
+  left: 30px;
+  bottom: 10px;
+  -webkit-animation-delay: -0.1s;
+          animation-delay: -0.1s;
+}
+#areaInfoCard .areaInfoBox .areaBox .weatherIcon .rainBox .rain5 {
+  opacity: 1;
+  left: 40px;
+  bottom: 10px;
+  -webkit-animation-delay: -0.7s;
+          animation-delay: -0.7s;
+}
+#areaInfoCard .areaInfoBox .areaBox .weatherIcon .iconText {
+  top: 30px;
+  text-align: center;
+}
+#areaInfoCard .areaInfoBox .temperBox .temper {
+  text-align: right;
+  margin: 0;
+}
+#areaInfoCard .areaInfoBox .rainfallBox .rainfallIcon {
+  display: inline-block;
+}
+#areaInfoCard .areaInfoBox .rainfallBox .rainfallIcon .rain {
+  width: 2px;
+  height: 10px;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  -webkit-animation: raindrop 1s infinite linear;
+          animation: raindrop 1s infinite linear;
+  background-color: black;
+}
+#areaInfoCard .areaInfoBox .rainfallBox .rainfallIcon .rain2 {
+  left: 5px;
+  bottom: 10px;
+  -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s;
+}
+#areaInfoCard .areaInfoBox .rainfallBox .rainfallIcon .rain3 {
+  left: 10px;
+  bottom: 10px;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+#areaInfoCard .areaInfoBox .rainfallBox .rainfallIcon .rain4 {
+  left: 15px;
+  bottom: 30px;
+  -webkit-animation-delay: -0.1s;
+          animation-delay: -0.1s;
+}
+#areaInfoCard .areaInfoBox .weatherNote {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+#areaInfoCard .areaInfoBox .weatherNote h4 {
+  margin: 0;
+  color: red;
+}
+#areaInfoCard .areaInfoBox .weatherNote .note {
+  margin: 0;
+  margin-top: 2px;
+  white-space: wrap;
+  word-wrap: break-word;
+}
+
+@-webkit-keyframes cloudrift {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes cloudrift {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@-webkit-keyframes raindrop {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+}
+@keyframes raindrop {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
+}
+.fas {
+  font-size: 20px;
+}
+
+.fa-umbrella {
+  position: absolute;
+  top: 13px;
+}
+
+.svgBox {
+  -webkit-animation: cloudrift 2s infinite;
+          animation: cloudrift 2s infinite;
+  -webkit-animation-delay: -0.1s;
+          animation-delay: -0.1s;
+  margin-bottom: 0;
+  position: absolute;
+  left: -10px;
+  top: -20px;
+}
+.svgBox .iconText {
+  text-align: center;
+  margin: -15px;
+}
+
+.svgBox svg {
+  width: 120px;
+  height: 100px;
+}
+.svgBox svg .sun {
+  fill: #FFD633;
+  stroke: #FFD633;
+  stroke-width: 40px;
+  stroke-dasharray: 4px;
+}
+.svgBox svg .sun .rain {
+  stroke: black;
+  fill: black;
+}
+.svgBox svg .sun .cloud {
+  fill: rgb(153, 146, 146);
+}
+
+
+
+
+
+
+
+/* ------map------ */
+
+.mapIcon {
+  -webkit-animation: cloudrift 2s infinite;
+          animation: cloudrift 2s infinite;
+  -webkit-animation-delay: -0.1s;
+          animation-delay: -0.1s;
+  width: 80px;
+  height: 80px;
+}
+.mapIcon .sun {
+  fill: #FFD633;
+  stroke: #FFD633;
+  stroke-width: 40px;
+  stroke-dasharray: 4px;
+}
+.mapIcon .rain {
+  width: 3px;
+  height: 10px;
+  stroke: black;
+  fill: black;
+  position: absolute;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+  left: 40px;
+  bottom: 10px;
+  -webkit-animation: raindrop 1s infinite linear;
+          animation: raindrop 1s infinite linear;
+  background-color: white;
+}
+.mapIcon .cloud {
+  fill: rgb(153, 146, 146);
+}
+
+#map {
+  z-index: 0;
+  height: 100%;
+}
+
+
+
+
+
+
+/* -----login----- */
+
+.loginBox {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px 30px;
+  border-radius: 10px;
+  background-color: #DD4F20 ;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+.loginBox .title {
+  font-weight: 600;
+  font-size: 30px;
+}
+.loginBox .loginText {
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: none;
+  padding: 5px;
+  font-weight: 600;
+  border-radius: 5px;
+  line-height: 100%;
+  font-size: 20px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+.loginBox .loginSubmit {
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: none;
+  font-weight: 800;
+  font-size: 20px;
+  padding: 5px 20px;
+  border-radius: 5px;
+  transition: 1s;
+  background-color: white;
+  color: #106EEC;
+}
+.loginBox .loginSubmit:hover {
+  background-color: #724A28;
+  color: #F85E13 ;
+  
+  
+}
+.loginBox a.link {
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+
+
+
+
+/* -----signup----- */
+
+.signupBox {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  background-color: #DD4F20 ;
+}
+.signupBox .title {
+  font-weight: 600;
+  font-size: 30px;
+}
+.signupBox .signupText {
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: none;
+  padding: 5px;
+  font-weight: 600;
+  border-radius: 5px;
+  line-height: 100%;
+  font-size: 20px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+.signupBox .signupSubmit {
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: none;
+  font-weight: 800;
+  font-size: 20px;
+  padding: 5px 20px;
+  border-radius: 5px;
+  transition: 1s;
+  background-color: #fff;
+  color: #106EEC;
+}
+.signupBox .signupSubmit:hover {
+  background-color: #724A28;
+  color: #F85E13 ;
+}
+.signupBox a.link {
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+/* -----userpage----- */
+.userInfoCard {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.userInfoCard .userPhoto {
+  border: 2px solid #000;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 10px;
+}
+.userInfoCard .userPhoto .fa-user {
+  font-size: 50px;
+}
+.fa-user {
+  font-size: 20px;
+}
